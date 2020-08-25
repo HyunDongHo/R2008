@@ -4,15 +4,15 @@ create database rmaria default charset utf8;
 
 create user 'rmaria'@'%' identified by 'rmaria';
 set password for 'rmaria'@'%' = password('rmaria');
-grant all privileges on rmaria.* to 'rmaria'@'%';
+grant all privileges on rmaria.* to 'rmaria'@'%' IDENTIFIED BY 'rmaria';
 
 create user 'rmaria'@'localhost' identified by 'rmaria';
 set password for 'rmaria'@'localhost' = password('rmaria');
-grant all privileges on rmaria.* to 'rmaria'@'localhost';
+grant all privileges on rmaria.* to 'rmaria'@'localhost' IDENTIFIED BY 'rmaria';
 
 create user 'rmaria'@'127.0.0.1' identified by 'rmaria';
 set password for 'rmaria'@'127.0.0.1' = password('rmaria');
-grant all privileges on rmaria.* to 'rmaria'@'127.0.0.1';
+grant all privileges on rmaria.* to 'rmaria'@'127.0.0.1' IDENTIFIED BY 'rmaria';
 
 --create user 'root'@'127.0.0.1' identified by 'mysql';
 

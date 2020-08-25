@@ -1,7 +1,5 @@
 use mysql;
 
-create database rmaria default charset utf8;
-
 create user 'rmaria'@'%' identified by 'rmaria';
 set password for 'rmaria'@'%' = password('rmaria');
 grant all privileges on rmaria.* to 'rmaria'@'%';
