@@ -12,7 +12,6 @@ services:
       MYSQL_USER: rmaria
       MYSQL_PASSWORD: rmaria
     volumes:
-        - ./init/:/docker-entrypoint-initdb.d
         - ./data/:/var/lib/mysql
     ports:
       - '3306:3306'
