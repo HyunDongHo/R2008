@@ -1,9 +1,8 @@
 download.csv <- function(dataframe) {
-    csv.vector <- capture.output(write.csv(dataframe))
+    csv.vector <- capture.output(write.csv(dataframe, row.names=F, quote = TRUE))
     csv.string <- paste(csv.vector, collapse="\n")
     csv.base64 <- as.character(RCurl::base64(csv.string))
     csv.html <- paste("<a download=\"dataframe.csv\" href=\"data:text/csv;base64,", csv.base64, "\" target=\"_blank\">Download CSV</a>", sep="")
     IRdisplay::display_html(csv.html)
 }
-submission$count = s$count
-download.csv(submission)
+download.csv(s)
